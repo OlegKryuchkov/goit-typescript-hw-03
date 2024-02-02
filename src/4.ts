@@ -12,12 +12,27 @@ class Person {
   }
 }
 
+// abstract class House {
+//   protected door: boolean = false;
+//   private tenants: Person[] = [];
+//   constructor(key: Key) {
+//     key = key;
+//   }
+//   abstract openDoor(key: Key): void;
+//   comeIn(person: Person): void {
+//     if (this.door) {
+//       this.tenants.push(person);
+//       console.log("можна заходити");
+//     } else {
+//       console.log("не можна заходити");
+//     }
+//   }
+// }
+
 abstract class House {
   protected door: boolean = false;
   private tenants: Person[] = [];
-  constructor(key: Key) {
-    key = key;
-  }
+  constructor(protected  key: Key) {  }
   abstract openDoor(key: Key): void;
   comeIn(person: Person): void {
     if (this.door) {
